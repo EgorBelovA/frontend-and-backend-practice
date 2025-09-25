@@ -2,78 +2,69 @@
 <html lamg="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Семестровая работа</title>
   </head>
   <body>
-    <div id="header">Хэдер</div>
-    <div id="menu">
-      <ul>
-        <li><a href="../index.html">Главная</a></li>
-        <li><a href="../pages/news.html">Новости</a></li>
-        <li><a href="../pages/practices.html">Практики</a></li>
-        <li><a href="../pages/goods.html">Товары</a></li>
-        <li><a href="../pages/contacts.html">Контакты</a></li>
-      </ul>
-    </div>
-    <div id="content">
-      <h2>Новости</h2>
-      <div
-        style="
-          border: 1px solid black;
-          border-radius: 20px;
-          background-color: #e7fffd;
-          padding: 10px;
-        "
-      >
-        <p><img src="../images/max.jpeg" alt="MAX" height="100" /></p>
-        <i>наказал(-а) Вас за плохую успеваемость</i>
-        <p>
-          Автор:
+    <div class="page-container">
+      <div class="header">Хэдер</div>
+      <div class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/news.html">Новости</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/practices.html">Практики</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/goods.html">Товары</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <h2>Новости</h2>
+        <div class="experience-card">
+          <p><img src="../images/max.jpeg" alt="MAX" height="100" /></p>
+          <i>наказал(-а) Вас за плохую успеваемость</i>
+          <p>
+            Автор:
+            <i
+              >Мессенджер
+              <span style="color: rgb(102, 0, 255); font-weight: bold"
+                >МАХ</span
+              ></i
+            >
+          </p>
+        </div>
+        <div class="experience-card">
+          <p>
+            <img src="../images/ekaterina.jpeg" alt="ekaterina" height="300" />
+            <video height="300" autoplay loop muted>
+              <source src="../videos/ekaterina.mp4" type="video/mp4" />
+            </video>
+          </p>
+          <i>Всеем хорошего и продуктивного дня!</i>
+          <p>Автор: <i>Екатерина Мизулина</i></p>
+        </div>
+        <div class="experience-card">
+          <p>
+            <img src="../images/real_news.jpeg" alt="real_news" height="100" />
+          </p>
           <i
-            >Мессенджер
-            <span style="color: rgb(102, 0, 255); font-weight: bold"
-              >МАХ</span
-            ></i
+            >Инфляция оставила адвоката без движения, пока Пугачеву оценивал
+            Росстат</i
           >
-        </p>
+          <p>Автор: <i>Реальные Новости</i></p>
+        </div>
       </div>
-      <div
-        style="
-          border: 1px solid black;
-          border-radius: 20px;
-          background-color: #e7fffd;
-          padding: 10px;
-        "
-      >
-        <p>
-          <img src="../images/ekaterina.jpeg" alt="ekaterina" height="300" />
-          <video height="300" autoplay loop muted>
-            <source src="../videos/ekaterina.mp4" type="video/mp4" />
-          </video>
-        </p>
-        <i>Всеем хорошего и продуктивного дня!</i>
-        <p>Автор: <i>Екатерина Мизулина</i></p>
-      </div>
-      <div
-        style="
-          border: 1px solid black;
-          border-radius: 20px;
-          background-color: #e7fffd;
-          padding: 10px;
-        "
-      >
-        <p>
-          <img src="../images/real_news.jpeg" alt="real_news" height="100" />
-        </p>
-        <i
-          >Инфляция оставила адвоката без движения, пока Пугачеву оценивал
-          Росстат</i
-        >
-        <p>Автор: <i>Реальные Новости</i></p>
-      </div>
+      <div class="footer">Футер</div>
     </div>
-    <div id="footer">Футер</div>
   </body>
 </html>

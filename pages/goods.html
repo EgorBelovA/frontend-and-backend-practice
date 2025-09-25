@@ -2,99 +2,91 @@
 <html lamg="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Семестровая работа</title>
   </head>
   <body>
-    <div id="header">Хэдер</div>
-    <div id="menu">
-      <ul>
-        <li><a href="../index.html">Главная</a></li>
-        <li><a href="../pages/news.html">Новости</a></li>
-        <li><a href="../pages/practices.html">Практики</a></li>
-        <li><a href="../pages/goods.html">Товары</a></li>
-        <li><a href="../pages/contacts.html">Контакты</a></li>
-      </ul>
-    </div>
-    <div id="content">
-      <h2>Товары</h2>
-      <div style="padding: 10px; background-color: azure">
-        мои параметры 179 рост 85-59-89 длина стопы 25,5 отправлю любым удобным
-        вам способом, за Ваш счет🎀🎀🎀🎀 в Москве могу передать лично!
+    <div class="page-container">
+      <div class="header">Хэдер</div>
+      <div class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/news.html">Новости</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/practices.html">Практики</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/goods.html">Товары</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/contacts.html">Контакты</a>
+          </li>
+        </ul>
       </div>
-      <div
-        style="
-          border: 1px solid black;
-          border-radius: 20px;
-          background-color: #fff4fd;
-          padding: 10px;
-        "
-      >
-        <p>
-          <img src="../images/юбешник.jpeg" alt="юбешник" height="250" />
-          <video height="250" autoplay loop muted>
-            <source src="../videos/юбешник.MOV" type="video/mp4" />
-          </video>
-        </p>
-        <i
-          >юбешник легенький
-          <p>с карманами🎀🫶🏼</p></i
-        >
-        <p>
-          Цена:
-          <i>1500₽</i>
-        </p>
-      </div>
-      <div
-        style="
-          border: 1px solid black;
-          border-radius: 20px;
-          background-color: #fff4fd;
-          padding: 10px;
-        "
-      >
-        <p>
-          <img src="../images/long.jpeg" alt="long" height="250" />
-          <video height="250" autoplay loop muted>
-            <source src="../videos/long.MOV" type="video/mp4" />
-          </video>
-        </p>
-        <div style="max-width: 500px">
+      <div class="content">
+        <h2>Товары</h2>
+        <div style="padding: 10px; background-color: azure">
+          мои параметры 179 рост 85-59-89 длина стопы 25,5 отправлю любым
+          удобным вам способом, за Ваш счет🎀🎀🎀🎀 в Москве могу передать
+          лично!
+        </div>
+        <div class="experience-card">
+          <p>
+            <img src="../images/юбешник.jpeg" alt="юбешник" height="250" />
+            <video height="250" autoplay loop muted>
+              <source src="../videos/юбешник.MOV" type="video/mp4" />
+            </video>
+          </p>
           <i
-            >полупрозрачный лонг с клевым принтом рукава длинные, в целом он не
-            сильно просвечивает, но по случаю можно и что-то под низ надеть
-            ахаха</i
+            >юбешник легенький
+            <p>с карманами🎀🫶🏼</p></i
           >
+          <p>
+            Цена:
+            <i>1500₽</i>
+          </p>
         </div>
-        <p>
-          Цена:
-          <i>1000₽</i>
-        </p>
-      </div>
-      <div
-        style="
-          border: 1px solid black;
-          border-radius: 20px;
-          background-color: #fff4fd;
-          padding: 10px;
-        "
-      >
-        <p>
-          <img src="../images/тяжелый_люкс.jpeg" alt="long" height="250" />
-          <video height="250" autoplay loop muted>
-            <source src="../videos/тяжелый_люкс.MOV" type="video/mp4" />
-          </video>
-        </p>
-        <div style="max-width: 200px">
-          <i>тяжелый люкс от YSL💋 рубашка с мужского плеча, размер L</i>
+        <div class="experience-card">
+          <p>
+            <img src="../images/long.jpeg" alt="long" height="250" />
+            <video height="250" autoplay loop muted>
+              <source src="../videos/long.MOV" type="video/mp4" />
+            </video>
+          </p>
+          <div style="max-width: 500px">
+            <i
+              >полупрозрачный лонг с клевым принтом рукава длинные, в целом он
+              не сильно просвечивает, но по случаю можно и что-то под низ надеть
+              ахаха</i
+            >
+          </div>
+          <p>
+            Цена:
+            <i>1000₽</i>
+          </p>
         </div>
-        <p>
-          Цена:
-          <i>5500₽</i>
-        </p>
+        <div class="experience-card">
+          <p>
+            <img src="../images/тяжелый_люкс.jpeg" alt="long" height="250" />
+            <video height="250" autoplay loop muted>
+              <source src="../videos/тяжелый_люкс.MOV" type="video/mp4" />
+            </video>
+          </p>
+          <div style="max-width: 200px">
+            <i>тяжелый люкс от YSL💋 рубашка с мужского плеча, размер L</i>
+          </div>
+          <p>
+            Цена:
+            <i>5500₽</i>
+          </p>
+        </div>
       </div>
+      <div class="footer">Футер</div>
     </div>
-    <div id="footer">Футер</div>
   </body>
 </html>
