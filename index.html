@@ -8,8 +8,10 @@
   </head>
   <body>
     <div class="page-container">
-      <div class="header">Хэдер</div>
-      <div class="nav">
+      <header class="header">
+        <h1 class="header-title">Главная</h1>
+      </header>
+      <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Главная</a>
@@ -27,10 +29,10 @@
             <a class="nav-link" href="pages/contacts.html">Контакты</a>
           </li>
         </ul>
-      </div>
+      </nav>
 
-      <div class="content">
-        <div class="profile-header">
+      <main class="content">
+        <article class="profile-header">
           <h1 class="profile-title">Информация об авторе</h1>
           <img
             class="profile-photo"
@@ -39,9 +41,9 @@
           />
           <h2 class="profile-name">Белов Егор Андреевич</h2>
           <p class="profile-group">ЭФБО-05-24</p>
-        </div>
-        <div class="about-me">
-          Обо мне:
+        </article>
+        <section class="about-me">
+          <h2>Обо мне:</h2>
           <br />
           Привет 👋, это я 🙋‍♀️, Майли 💁‍♀️. Ну если быть точной Дестини Хоуп Сайрус
           так меня назвали при рождении 👶. Но для всего мира 🌍 я просто Майли
@@ -108,34 +110,48 @@
           выбирать любовь — к миру 🌍 к музыке 🎵 и самое главное к себе 💖.
           <br />
           <br />С любовью ❤️, Ваша Майли 💫
-        </div>
-        <div class="skills-container">
-          <div class="skill-tag">Навык 1 Взрывной характер</div>
-          <div class="skill-tag">Навык 2 Основной инстинкт</div>
-          <div class="skill-tag">Навык 3 CoZZy Style</div>
-          <div class="skill-tag">Навык 4 На фото я (Make America...)</div>
-        </div>
+        </section>
+        <section class="skills-container">
+          <h2>Мои навыки</h2>
+          <div class="skills-grid">
+            <div class="skill-tag">Навык 1 Взрывной характер</div>
+            <div class="skill-tag">Навык 2 Основной инстинкт</div>
+            <div class="skill-tag">Навык 3 CoZZy Style</div>
+            <div class="skill-tag">Навык 4 На фото я (Make America...)</div>
+          </div>
+        </section>
 
-        <div class="experience-section">
+        <section class="experience-section">
           <h2 class="section-title">Мой опыт работы</h2>
-          <div class="experience-card">
-            <h3 class="experience-title">Опыт 1</h3>
-            <p class="experience-desc">первый мой опыт был дома</p>
+          <div class="experience-grid">
+            <article class="experience-card">
+              <h3 class="experience-title">Опыт 1</h3>
+              <p class="experience-desc">первый мой опыт был дома</p>
+            </article>
+            <article class="experience-card">
+              <h3 class="experience-title">Опыт 2</h3>
+              <p class="experience-desc">второй мой опыт был в самолете</p>
+            </article>
+            <article class="experience-card">
+              <h3 class="experience-title">Опыт 3</h3>
+              <p class="experience-desc">
+                третий мой опыт был на концерте Егора Булаткина(Крида(Валя
+                Карнавал 💖))
+              </p>
+            </article>
           </div>
-          <div class="experience-card">
-            <h3 class="experience-title">Опыт 2</h3>
-            <p class="experience-desc">второй мой опыт был в самолете</p>
-          </div>
-          <div class="experience-card">
-            <h3 class="experience-title">Опыт 3</h3>
-            <p class="experience-desc">
-              третий мой опыт был на концерте Егора Булаткина(Крида(Валя
-              Карнавал 💖))
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="footer">Футер</div>
+        </section>
+      </main>
+      <footer class="footer"><p>Не все права защищены.</p></footer>
     </div>
   </body>
 </html>
+
+<script>
+  // setInterval(() => {
+  //   document.querySelector('.header-title').style.color = 'orange';
+  // }, 1000);
+
+  // document.querySelector('.header-title').style.mixBlendMode = 'hard-light';
+  // document.querySelector('.header-title').style.color = 'orange';
+</script>
