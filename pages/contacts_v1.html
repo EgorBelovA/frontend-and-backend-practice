@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lamg="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/theme.js" defer></script>
+    <title>Контакты</title>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div class="content">
+        <div class="page">
+          <header class="header">
+            <h1 class="header__title">Контакты</h1>
+          </header>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item nav__item--active">
+                <a class="nav__link" href="../index.html">Главная</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="../pages/goods.html">Товары</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="../pages/news.html">Новости</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="../pages/contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <main class="main">
+            <h2>Контакты</h2>
+            Почта: miley.cyrus@tamtam.ru
+            <br />
+            Адрес:
+            <br />
+            c/o David Russell
+            <br />Crush Music Management <br />
+            838 N. Fairfax Ave. <br />
+            Los Angeles, CA 90046
+            <br />
+            <button class="contact-button" onclick="contactModal.showModal()">
+              Связаться со мной
+            </button>
+          </main>
+          <footer class="footer">
+            <p class="footer__text">(not)&copy; Не все права защищены.</p>
+          </footer>
+        </div>
+        <div class="darkmode card-b fas fa-moon"></div>
+      </div>
+    </div>
+    <div class="clip"></div>
+  </body>
+</html>
+
+<dialog id="contactModal">
+  <div class="modal-header">
+    <h2>Форма обратной связи</h2>
+  </div>
+
+  <div class="modal-content">
+    <form id="feedbackForm" method="dialog">
+      <div class="form-group">
+        <label for="name">Имя <span class="required">*</span></label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Введите ваше имя"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Телефон <span class="required">*</span></label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          placeholder="+1 800-555-35-35"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email"
+          >Электронная почта <span class="required">*</span></label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="mailey.cyrus@tamtam.ru"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="category"
+          >Категория обращения <span class="required">*</span></label
+        >
+        <select id="category" name="category" required>
+          <option value="">Выберите категорию</option>
+          <option value="signature">Сделать сигну</option>
+          <option value="commercial">Коммерческое предложение</option>
+          <option value="clothing">Покупка моей одежды</option>
+          <option value="complaint">Жалоба</option>
+          <option value="greeting">Передать привет</option>
+          <option value="other">Другое</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message"
+          >Текст обращения <span class="required">*</span></label
+        >
+        <textarea
+          id="message"
+          name="message"
+          required
+          placeholder="Опишите вашу проблему или вопрос..."
+        ></textarea>
+      </div>
+
+      <div class="modal-actions">
+        <!-- Кнопка отмены с автоматическим закрытием через form method="dialog" -->
+        <button type="submit" class="btn btn-secondary">Отмена</button>
+        <!-- Кнопка отправки с обработкой через JavaScript -->
+        <button type="button" class="btn btn-primary" onclick="submitForm()">
+          Отправить
+        </button>
+      </div>
+    </form>
+  </div>
+</dialog>
