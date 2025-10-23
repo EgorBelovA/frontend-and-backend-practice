@@ -4,47 +4,57 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../style/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Семестровая работа</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/theme.js" defer></script>
+    <title>Контакты</title>
   </head>
   <body>
-    <div class="page-container">
-      <header class="header"><h1>Контакты</h1></header>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../pages/news.html">Новости</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../pages/practices.html">Практики</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../pages/goods.html">Товары</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../pages/contacts.html">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <main class="content">
-        <h2>Контакты</h2>
-        Почта: miley.cyrus@tamtam.ru
-        <br />
-        Адрес:
-        <br />
-        c/o David Russell
-        <br />Crush Music Management <br />
-        838 N. Fairfax Ave. <br />
-        Los Angeles, CA 90046
-        <br />
-        <button class="contact-button" onclick="contactModal.showModal()">
-          Связаться со мной
-        </button>
-      </main>
-      <footer class="footer"><p>Не все права защищены.</p></footer>
+    <div id="container" class="container">
+      <div class="content">
+        <div class="page">
+          <header class="header">
+            <h1 class="header__title">Контакты</h1>
+          </header>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item nav__item--active">
+                <a class="nav__link" href="../index.html">Главная</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="../pages/goods.html">Товары</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="../pages/news.html">Новости</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="../pages/contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <main class="main">
+            <h2>Контакты</h2>
+            Почта: miley.cyrus@tamtam.ru
+            <br />
+            Адрес:
+            <br />
+            c/o David Russell
+            <br />Crush Music Management <br />
+            838 N. Fairfax Ave. <br />
+            Los Angeles, CA 90046
+            <br />
+            <button class="contact-button" onclick="contactModal.showModal()">
+              Связаться со мной
+            </button>
+          </main>
+          <footer class="footer">
+            <p class="footer__text">(not)&copy; Не все права защищены.</p>
+          </footer>
+        </div>
+        <div class="darkmode card-b fas fa-moon"></div>
+      </div>
     </div>
+    <div class="clip"></div>
   </body>
 </html>
 

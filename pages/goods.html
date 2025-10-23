@@ -4,89 +4,110 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../style/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Семестровая работа</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/theme.js" defer></script>
+    <title>Товары</title>
   </head>
   <body>
-    <div class="page-container">
-      <header class="header"><h1>Товары</h1></header>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../pages/news.html">Новости</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../pages/practices.html">Практики</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../pages/goods.html">Товары</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../pages/contacts.html">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <main class="content">
-        <h2>Товары</h2>
-        <div style="padding: 10px; background-color: azure">
-          мои параметры 179 рост 85-59-89 длина стопы 25,5 отправлю любым
-          удобным вам способом, за Ваш счет🎀🎀🎀🎀 в Москве могу передать
-          лично!
+    <div id="container" class="container">
+      <div class="content">
+        <div class="page">
+          <header class="header">
+            <h1 class="header__title">Товары</h1>
+          </header>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item nav__item--active">
+                <a class="nav__link" href="../index.html">Главная</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="../pages/goods.html">Товары</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="../pages/news.html">Новости</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="../pages/contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <main class="main">
+            <section class="goods__container">
+              <div class="goods__card">
+                мои параметры 179 рост 85-59-89 длина стопы 25,5 отправлю любым
+                удобным вам способом, за Ваш счет🎀🎀🎀🎀 в Москве могу передать
+                лично!
+              </div>
+              <div class="goods__card">
+                <p>
+                  <img
+                    src="../images/юбешник.jpeg"
+                    alt="юбешник"
+                    height="250"
+                  />
+                  <video height="250" autoplay loop muted>
+                    <source src="../videos/юбешник.MOV" type="video/mp4" />
+                  </video>
+                </p>
+                <i
+                  >юбешник легенький
+                  <p>с карманами🎀🫶🏼</p></i
+                >
+                <p>
+                  Цена:
+                  <i>1500₽</i>
+                </p>
+              </div>
+              <div class="goods__card">
+                <p>
+                  <img src="../images/long.jpeg" alt="long" height="250" />
+                  <video height="250" autoplay loop muted>
+                    <source src="../videos/long.MOV" type="video/mp4" />
+                  </video>
+                </p>
+                <div style="max-width: 500px">
+                  <i
+                    >полупрозрачный лонг с клевым принтом рукава длинные, в
+                    целом он не сильно просвечивает, но по случаю можно и что-то
+                    под низ надеть ахаха</i
+                  >
+                </div>
+                <p>
+                  Цена:
+                  <i>1000₽</i>
+                </p>
+              </div>
+              <div class="goods__card">
+                <p>
+                  <img
+                    src="../images/тяжелый_люкс.jpeg"
+                    alt="long"
+                    height="250"
+                  />
+                  <video height="250" autoplay loop muted>
+                    <source src="../videos/тяжелый_люкс.MOV" type="video/mp4" />
+                  </video>
+                </p>
+                <div style="max-width: 200px">
+                  <i
+                    >тяжелый люкс от YSL💋 рубашка с мужского плеча, размер L</i
+                  >
+                </div>
+                <p>
+                  Цена:
+                  <i>5500₽</i>
+                </p>
+              </div>
+            </section>
+          </main>
+          <footer class="footer">
+            <p class="footer__text">(not)&copy; Не все права защищены.</p>
+          </footer>
         </div>
-        <div class="experience-card">
-          <p>
-            <img src="../images/юбешник.jpeg" alt="юбешник" height="250" />
-            <video height="250" autoplay loop muted>
-              <source src="../videos/юбешник.MOV" type="video/mp4" />
-            </video>
-          </p>
-          <i
-            >юбешник легенький
-            <p>с карманами🎀🫶🏼</p></i
-          >
-          <p>
-            Цена:
-            <i>1500₽</i>
-          </p>
-        </div>
-        <div class="experience-card">
-          <p>
-            <img src="../images/long.jpeg" alt="long" height="250" />
-            <video height="250" autoplay loop muted>
-              <source src="../videos/long.MOV" type="video/mp4" />
-            </video>
-          </p>
-          <div style="max-width: 500px">
-            <i
-              >полупрозрачный лонг с клевым принтом рукава длинные, в целом он
-              не сильно просвечивает, но по случаю можно и что-то под низ надеть
-              ахаха</i
-            >
-          </div>
-          <p>
-            Цена:
-            <i>1000₽</i>
-          </p>
-        </div>
-        <div class="experience-card">
-          <p>
-            <img src="../images/тяжелый_люкс.jpeg" alt="long" height="250" />
-            <video height="250" autoplay loop muted>
-              <source src="../videos/тяжелый_люкс.MOV" type="video/mp4" />
-            </video>
-          </p>
-          <div style="max-width: 200px">
-            <i>тяжелый люкс от YSL💋 рубашка с мужского плеча, размер L</i>
-          </div>
-          <p>
-            Цена:
-            <i>5500₽</i>
-          </p>
-        </div>
-      </main>
-      <footer class="footer"><p>Не все права защищены.</p></footer>
+      </div>
+      <div class="darkmode card-b fas fa-moon"></div>
     </div>
+    <div class="clip"></div>
   </body>
 </html>
