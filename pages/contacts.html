@@ -1,140 +1,248 @@
 <!DOCTYPE html>
-<html lamg="ru">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../style/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../styles/styles.css" />
     <script src="../scripts/theme.js" defer></script>
-    <title>Контакты</title>
+    <title>Контакты - Портфолио</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
   </head>
-  <body>
+  <body class="bg-light">
     <div id="container" class="container">
       <div class="content">
-        <div class="page">
-          <header class="header">
-            <h1 class="header__title">Контакты</h1>
+        <div class="container-fluid p-0">
+          <header class="bg-primary text-white py-4">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-3 text-center mb-3 mb-md-0">
+                  <img
+                    src="../images/Adidas_logo.png"
+                    alt="Логотип"
+                    class="img-fluid"
+                    style="width: 150px; height: 150px; object-fit: scale-down"
+                  />
+                </div>
+                <div class="col">
+                  <h2 class="card-title h2 text-black">
+                    BELOV EGOR ANDREEVICH
+                  </h2>
+                </div>
+              </div>
+            </div>
           </header>
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item nav__item--active">
-                <a class="nav__link" href="../index.html">Главная</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="../pages/goods.html">Товары</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="../pages/news.html">Новости</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="../pages/contacts.html">Контакты</a>
-              </li>
-            </ul>
+
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">
+                      <i class="bi bi-house me-1"></i>Главная
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="projects.html">
+                      <i class="bi bi-briefcase me-1"></i>Проекты
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="diary.html">
+                      <i class="bi bi-journal me-1"></i>Дневник
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="contacts.html">
+                      <i class="bi bi-telephone me-1"></i>Контакты
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </nav>
 
-          <main class="main">
-            <h2>Контакты</h2>
-            Почта: miley.cyrus@tamtam.ru
-            <br />
-            Адрес:
-            <br />
-            c/o David Russell
-            <br />Crush Music Management <br />
-            838 N. Fairfax Ave. <br />
-            Los Angeles, CA 90046
-            <br />
-            <button class="contact-button" onclick="contactModal.showModal()">
-              Связаться со мной
-            </button>
+          <main class="container my-4">
+            <h1 class="h3 mb-4">Свяжитесь со мной</h1>
+
+            <div class="row">
+              <div class="col-lg-8 mb-4">
+                <div class="card shadow-sm">
+                  <div class="card-header bg-light">
+                    <h3 class="card-title h5 mb-0">
+                      <i class="bi bi-envelope text-primary"></i>
+                      Контактная форма
+                    </h3>
+                  </div>
+                  <div class="card-body">
+                    <form id="contactForm" novalidate>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="name" class="form-label">Имя</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Пожалуйста, введите ваше имя.
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Пожалуйста, введите корректный email.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="subject" class="form-label">Тема</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="subject"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Пожалуйста, введите тему сообщения.
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="message" class="form-label"
+                          >Сообщение</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          rows="5"
+                          required
+                        ></textarea>
+                        <div class="invalid-feedback">
+                          Пожалуйста, введите ваше сообщение.
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">
+                        Отправить сообщение
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="card shadow-sm mb-4">
+                  <div class="card-header bg-light">
+                    <h3 class="card-title h5 mb-0">
+                      <i class="bi bi-info-circle text-primary"></i>
+                      Контактная информация
+                    </h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex align-items-start mb-3">
+                      <i class="bi bi-envelope text-primary me-3 mt-1"></i>
+                      <div>
+                        <h6 class="mb-0">Email</h6>
+                        <p class="text-muted mb-0">student@edu.ru</p>
+                      </div>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-3">
+                      <i class="bi bi-telephone text-primary me-3 mt-1"></i>
+                      <div>
+                        <h6 class="mb-0">Телефон</h6>
+                        <p class="text-muted mb-0">+7 (999) 123-45-67</p>
+                      </div>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-3">
+                      <i class="bi bi-github text-primary me-3 mt-1"></i>
+                      <div>
+                        <h6 class="mb-0">GitHub</h6>
+                        <p class="text-muted mb-0">github.com/username</p>
+                      </div>
+                    </div>
+
+                    <div class="d-flex align-items-start">
+                      <i class="bi bi-geo-alt text-primary me-3 mt-1"></i>
+                      <div>
+                        <h6 class="mb-0">Адрес</h6>
+                        <p class="text-muted mb-0">Город, Страна</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card shadow-sm">
+                  <div class="card-header bg-light">
+                    <h3 class="card-title h5 mb-0">
+                      <i class="bi bi-clock text-primary"></i>
+                      Доступность
+                    </h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="mb-3">
+                      <h6 class="mb-1">Понедельник - Пятница</h6>
+                      <p class="text-muted small mb-0">9:00 - 18:00</p>
+                    </div>
+
+                    <div class="mb-3">
+                      <h6 class="mb-1">Суббота</h6>
+                      <p class="text-muted small mb-0">10:00 - 16:00</p>
+                    </div>
+
+                    <div>
+                      <h6 class="mb-1">Воскресенье</h6>
+                      <p class="text-muted small mb-0">Выходной</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </main>
-          <footer class="footer">
-            <p class="footer__text">(not)&copy; Не все права защищены.</p>
+
+          <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <p class="mb-0">(not)&copy; 2025 Не все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                  <a
+                    href="contacts.html"
+                    class="text-white text-decoration-none me-3"
+                    >Контакты</a
+                  >
+                </div>
+              </div>
+            </div>
           </footer>
         </div>
-        <div class="darkmode card-b fas fa-moon"></div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
       </div>
+      <div class="darkmode card-b fas fa-moon"></div>
     </div>
     <div class="clip"></div>
   </body>
 </html>
-
-<dialog id="contactModal">
-  <div class="modal-header">
-    <h2>Форма обратной связи</h2>
-  </div>
-
-  <div class="modal-content">
-    <form id="feedbackForm" method="dialog">
-      <div class="form-group">
-        <label for="name">Имя <span class="required">*</span></label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          placeholder="Введите ваше имя"
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="phone">Телефон <span class="required">*</span></label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          required
-          placeholder="+1 800-555-35-35"
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="email"
-          >Электронная почта <span class="required">*</span></label
-        >
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          placeholder="mailey.cyrus@tamtam.ru"
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="category"
-          >Категория обращения <span class="required">*</span></label
-        >
-        <select id="category" name="category" required>
-          <option value="">Выберите категорию</option>
-          <option value="signature">Сделать сигну</option>
-          <option value="commercial">Коммерческое предложение</option>
-          <option value="clothing">Покупка моей одежды</option>
-          <option value="complaint">Жалоба</option>
-          <option value="greeting">Передать привет</option>
-          <option value="other">Другое</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="message"
-          >Текст обращения <span class="required">*</span></label
-        >
-        <textarea
-          id="message"
-          name="message"
-          required
-          placeholder="Опишите вашу проблему или вопрос..."
-        ></textarea>
-      </div>
-
-      <div class="modal-actions">
-        <!-- Кнопка отмены с автоматическим закрытием через form method="dialog" -->
-        <button type="submit" class="btn btn-secondary">Отмена</button>
-        <!-- Кнопка отправки с обработкой через JavaScript -->
-        <button type="button" class="btn btn-primary" onclick="submitForm()">
-          Отправить
-        </button>
-      </div>
-    </form>
-  </div>
-</dialog>
