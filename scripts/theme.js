@@ -31,33 +31,4 @@ $(document).ready(function () {
 
     $(form).addClass('was-validated');
   });
-
-  $('.btn-group .btn').click(function () {
-    $('.btn-group .btn').removeClass('active');
-    $(this).addClass('active');
-
-    const filter = $(this).text().toLowerCase();
-
-    if (filter === 'все') {
-      $('.project-card').show();
-    } else {
-      $('.project-card').each(function () {
-        const badges = $(this).find('.badge');
-        let show = false;
-
-        badges.each(function () {
-          if ($(this).text().toLowerCase() === filter) {
-            show = true;
-            return false;
-          }
-        });
-
-        if (show) {
-          $(this).show();
-        } else {
-          $(this).hide();
-        }
-      });
-    }
-  });
 });
