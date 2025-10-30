@@ -42,6 +42,10 @@ document
     }
   });
 
+document.getElementById('closeBtn').addEventListener('click', function () {
+  contactModal.close();
+});
+
 // Обработка отправки формы через Enter (предотвращаем стандартное поведение)
 document
   .getElementById('feedbackForm')

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../scripts/theme.js" defer></script>
+    <script src="../scripts/contacts.js" defer></script>
     <title>Контакты</title>
   </head>
   <body>
@@ -129,7 +130,7 @@
 
       <div class="modal-actions">
         <!-- Кнопка отмены с автоматическим закрытием через form method="dialog" -->
-        <button type="submit" class="btn btn-secondary">Отмена</button>
+        <div id="closeBtn" class="btn btn-secondary">Отмена</div>
         <!-- Кнопка отправки с обработкой через JavaScript -->
         <button type="button" class="btn btn-primary" onclick="submitForm()">
           Отправить
