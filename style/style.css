@@ -37,6 +37,9 @@ body {
   margin: 0 auto;
   background: #fff5e5;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -97,6 +100,7 @@ body {
 }
 
 main {
+  flex: 1;
   padding: var(--space-lg);
 }
 
@@ -457,6 +461,12 @@ main {
   }
 }
 
+.content {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+}
+
 /* Стили для модального окна */
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.6);
@@ -479,7 +489,11 @@ dialog {
 }
 
 .modal-header {
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  background: linear-gradient(
+    135deg,
+    var(--dark-caramel) 0%,
+    var(--dark-brown) 100%
+  );
   color: white;
   padding: 1.5rem;
   border-radius: 12px 12px 0 0;
@@ -523,7 +537,7 @@ dialog {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: var(--caramel);
 }
 
 .form-group textarea {
@@ -549,7 +563,11 @@ dialog {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(
+    135deg,
+    var(--caramel) 0%,
+    var(--dark-caramel) 100%
+  );
   color: white;
 }
 
@@ -691,7 +709,7 @@ body .container *[class*='card'].card-b {
 }
 
 body .container .darkmode {
-  position: fixed;
+  position: absolute;
   bottom: 1rem;
   left: 1rem;
   font-size: 1.75rem;
@@ -704,6 +722,8 @@ body .container .darkmode {
   color: var(--accent);
   cursor: pointer;
   transition: 0.25s -0.05s;
+  width: 20px;
+  height: 20px;
 }
 
 body .container .darkmode:hover {
