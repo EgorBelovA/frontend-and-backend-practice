@@ -2,7 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="styles/styles.css" />
     <script src="scripts/theme.js" defer></script>
@@ -17,19 +20,26 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
   </head>
+
   <body>
+    <a class="skip-link" href="#main-content"
+      >Перейти к основному содержимому</a
+    >
     <div id="container" class="container p-0">
       <div class="content">
         <header class="bg-danger text-white py-4">
           <div class="container">
             <div class="row align-items-center">
               <div class="col-md-3 text-center mb-3 mb-md-0">
-                <img
-                  src="images/Adidas_logo.png"
-                  alt="Фото студента"
-                  class="img-fluid"
-                  style="width: 200px; object-fit: scale-down"
-                />
+                <picture>
+                  <source srcset="images/Adidas_logo.webp" type="image/webp" />
+                  <img
+                    src="images/Adidas_logo.jpg"
+                    class="img-fluid"
+                    alt="Логотип"
+                    style="width: 200px; object-fit: scale-down"
+                  />
+                </picture>
               </div>
               <div class="col">
                 <div class="card-title h1 text-black fw-bold font-monospace">
@@ -39,8 +49,9 @@
             </div>
           </div>
         </header>
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav
+          class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky top-0 z-3"
+        >
           <div class="container">
             <button
               class="navbar-toggler"
@@ -84,12 +95,50 @@
               <div class="card-body p-4">
                 <div class="row align-items-center">
                   <div class="col-md-3 text-center mb-3 mb-md-0">
-                    <img
-                      src="images/avatar.png"
-                      alt="Фото студента"
-                      class="img-fluid rounded-top rounded-bottom"
-                      style="width: 350px; height: 150px; object-fit: cover"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          images/hero/hero-150.avif 150w,
+                          images/hero/hero-200.avif 200w,
+                          images/hero/hero-300.avif 300w
+                        "
+                        sizes="(max-width: 400px) 150px, (max-width: 700px) 200px, 300px"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="
+                          images/hero/hero-150.webp 150w,
+                          images/hero/hero-200.webp 200w,
+                          images/hero/hero-300.webp 300w
+                        "
+                        sizes="(max-width: 400px) 150px, (max-width: 700px) 200px, 300px"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          images/hero/hero-150.jpg 150w,
+                          images/hero/hero-200.jpg 200w,
+                          images/hero/hero-300.jpg 300w
+                        "
+                        sizes="(max-width: 400px) 150px, (max-width: 700px) 200px, 300px"
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="images/hero/hero-300.jpg"
+                        srcset="
+                          images/hero/hero-150.jpg 150w,
+                          images/hero/hero-200.jpg 200w,
+                          images/hero/hero-300.jpg 300w
+                        "
+                        sizes="(max-width: 400px) 150px, (max-width: 700px) 200px, 300px"
+                        width="300"
+                        height="300"
+                        alt="Фото студента"
+                        class="rounded-bottom rounded-top img-fluid"
+                        style="height: 200px; object-fit: cover"
+                        fetchpriority="high"
+                      />
+                    </picture>
                   </div>
                   <div class="col-md-9">
                     <p class="card-text text-muted mb-2">
@@ -122,78 +171,49 @@
                 </h3>
               </div>
               <div class="card-body">
-                <br />
-                Привет 👋, это я 🙋‍♀️, Майли 💁‍♀️. Ну если быть точной Дестини Хоуп
-                Сайрус так меня назвали при рождении 👶. Но для всего мира 🌍 я
-                просто Майли 💫. Моя жизнь всегда была похожа на американские
-                горки 🎢, полные ярких красок 🌈, громкой музыки 🎵 и постоянных
-                изменений 🔄. Расскажу вам мою историю так как я её помню и
-                чувствую 💖.
-                <br />
-                <br />Глава 1: Рождение в тени славы Я появилась на свет 💡 23
-                ноября 1992 года в Нэшвилле 🎸, Теннесси. Можно сказать что
-                музыка 🎶 и сцена 🎭 были моей судьбой с самого начала 🚦. Мой
-                папа 👨‍🦱 — Билли Рэй Сайрус чей хит «Achy Breaky Heart» гремел на
-                весь мир 🌎. Но расти в тени такой успеха было непросто 😔. Я не
-                хотела быть просто «дочкой Билли Рэя» 👧. Во мне всегда горела
-                своя собственная искра ✨. Свое имя Дестини Судьба я сменила на
-                Майли свое детское прозвище ещё в детстве это был мой первый
-                самостоятельный шаг 👣. С восьми лет я уже упрашивала отца взять
-                меня на прослушивания 🎤. Я знала что хочу этого больше всего на
-                свете ☀️. Мы с папой были небогаты жили в простом трейлере 🚌 и
-                эта борьба за мечту закалила мой характер 💪. Я научилась быть
-                бойцом 🥊.
-                <br />
-                <br />Глава 2: Ханна Монтана: Мечта и ловушка И вот случилось то
-                что навсегда изменило мою жизнь — роль Майли Стюарт обычной
-                девочки которая ведёт двойную жизнь как поп-суперзвезда Ханна
-                Монтана 💃. Мне было 11 лет когда я её получила 🎬. Это была
-                настоящая сказка 🧚‍♀️! Сериал стал феноменом а песни Ханны
-                разлетелись по всему миру 🌐. Я стала иконой для миллионов
-                подростков 👩‍🎤. Но за этим блеском скрывалась настоящая борьба
-                🤼‍♀️. Я как и моя героиня жила двойной жизнью 🎭. Мир видел
-                идеальную улыбчивую Ханну 😊 а настоящая Майли — сложная
-                бунтующая пытающаяся найти себя — была спрятана 🫥. Я выросла на
-                глазах у всей планеты 🌍 и это было одновременно и
-                благословением 🙏 и проклятием 😣. Мне приходилось постоянно
-                соответствовать образу «хорошей девочки» 👧 хотя внутри всё
-                кипело 🌋.
-                <br />
-                <br />Глава 3: Разрушая образ: «Wrecking Ball» и новая я К 20
-                годам я поняла что больше не могу носить эту маску 🎭. Мне нужно
-                было сломать стену которую построила вокруг меня Ханна Монтана
-                🧱. Так началась моя трансформация 🦋. Я отрезала свои длинные
-                волосы 💇‍♀️ сделала дерзкий каре и выпустила сингл «We Can't Stop»
-                🎶. Это был мой манифест: детство кончилось 👋. А потом был
-                «Wrecking Ball»🔨. Эта песня и клип стали взрывом 💥. Я показала
-                миру свою уязвимость свою боль и свою силу 💔❤️‍🔥. Кто-то был
-                шокирован 😱 кто-то не понял 🤨 но все заговорили 🗣️. Я больше
-                не была девочкой с Disney 🐭. Я стала взрослой артисткой которая
-                не боится рисковать и быть собой 🙅‍♀️. Это было страшно 😨 но
-                освобождающе 🕊️.
-                <br />
-                <br />Глава 4: Взлёты, падения и возрождение Были в моей жизни и
-                тёмные времена 🌑 — проблемы с психическим здоровьем 🧠
-                публичные скандалы 📰 сложные отношения 💔. Но я всегда находила
-                спасение в музыке 🎵. Я экспериментировала: записывала
-                кантри-альбом «Younger Now» 🤠 в честь своих корней выпускала
-                рок-пластинку «Plastic Hearts» 🎸 которая показала мою настоящую
-                музыкальную любовь ❤️. А в 2023 году я выпустила сингл «Flowers»
-                💐. Эта песня стала гимном самодостаточности и любви к себе 💖.
-                Она побила все рекорды 🏆 и показала миру что я прошла через
-                огонь 🔥 и вышла из него сильнее чем когда-либо 💪. Это была не
-                просто победа в чартах 📊 — это была моя личная победа 🥇.
-                <br />
-                <br />Глава 5: Кто я сегодня Сегодня я — артистка 🎤 актриса 🎬
-                и что самое важное человек который наконец-то нашёл мир внутри
-                себя 🧘‍♀️. Я выступаю записываю музыку которая мне нравится и не
-                боюсь быть разной 🌟. Я благодарна Ханне Монтане за тот старт 🚀
-                но счастлива что оставила её в прошлом ⏳. Моя жизнь — это
-                история о том как не бояться меняться 🔄 как принимать свои
-                ошибки и как всегда в конечном счёте выбирать любовь — к миру 🌍
-                к музыке 🎵 и самое главное к себе 💖.
-                <br />
-                <br />С любовью ❤️, Ваша Майли 💫
+                Привет 👋, меня зовут Егор Белов 🙋‍♂️. Я родился в Пензе 🏙️ и с
+                самого детства тянулся к компьютерам, музыке и всему, что можно
+                сделать своими руками 🎧💻. Сегодня я — фуллстек-разработчик
+                низшего класса (как я сам себя шучу 😄), который одновременно
+                пишет код и пишет биты 🎵.
+
+                <br /><br />
+
+                Глава 1: Начало пути Всё стартовало в родной Пензе 🌆. Маленький
+                город, простая жизнь, первые шаги в программировании — HTML на
+                стареньком ПК, эксперименты в JavaScript и попытки разобрать
+                чужие проекты по кусочкам 🧩. Тогда я понял: создавать — это моё
+                💡.
+
+                <br /><br />
+
+                Глава 2: Музыка внутри меня Помимо кода, меня всегда притягивала
+                музыка 🎶. Моргенштерн вдохновил на совсем другой вайб 🔥. Его
+                треки Кадиллак, ICE, Грустная песня, Новый Мерин стали для меня
+                чем-то большим, чем просто плейлист — это ритм, который всегда
+                подталкивал двигаться вперёд 🚗💨. Отсюда и началось: я стал
+                писать свои биты, экспериментировать с звучанием и находить
+                собственный стиль 🎛️.
+
+                <br /><br />
+
+                Глава 3: Путь фуллстека Сначала фронтенд — HTML/CSS, потом
+                JavaScript, затем бэкенд, базы данных и связки всего этого
+                вместе 🔗. Я не супер-гуру, не сеньор, не ниндзя — я тихо, шаг
+                за шагом расту и учусь каждый день 📈. Фуллстек низшего класса?
+                Да 😄 Но чтобы стать высшего, нужно пройти и эту ступень 💪.
+
+                <br /><br />
+
+                Глава 4: Кто я сегодня Сейчас я — разработчик, которому нравится
+                процесс, а не титулы ⚙️. Я изучаю новые фреймворки, собираю
+                проекты, пишу музыку и стараюсь оставаться собой ✨. Я верю, что
+                путь важнее результата, а каждый новый коммит — шаг к новой
+                версии себя.
+
+                <br /><br />
+
+                С уважением и лёгким вайбом 😎 Егор Белов
               </div>
               <a
                 href="assets/resume.pdf"
@@ -284,12 +304,18 @@
                 <div class="row g-3">
                   <div class="col-md-4">
                     <div class="card h-100">
-                      <img
-                        src="images/project1.png"
-                        class="cardimg-top"
-                        alt="Личный сайт"
-                        style="height: 150px; object-fit: cover"
-                      />
+                      <picture>
+                        <source
+                          srcset="images/project1.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="images/project1.png"
+                          class="card-img-top"
+                          alt="Личный сайт"
+                          style="height: 150px; object-fit: cover"
+                        />
+                      </picture>
                       <div class="card-body">
                         <div class="card-title h5">Личный сайт</div>
                         <p class="card-text small text-muted">
@@ -306,12 +332,18 @@
                   </div>
                   <div class="col-md-4">
                     <div class="card h-100">
-                      <img
-                        src="images/project2.png"
-                        class="cardimg-top"
-                        alt="Todo приложение"
-                        style="height: 150px; object-fit: cover"
-                      />
+                      <picture>
+                        <source
+                          srcset="images/project2.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="images/project2.png"
+                          class="card-img-top"
+                          alt="Todo приложение"
+                          style="height: 150px; object-fit: cover"
+                        />
+                      </picture>
                       <div class="card-body">
                         <div class="card-title h5">Messager</div>
                         <p class="card-text small text-muted">
@@ -327,12 +359,18 @@
                   </div>
                   <div class="col-md-4">
                     <div class="card h-100">
-                      <img
-                        src="images/project3.png"
-                        class="cardimg-top"
-                        alt="Интернет-магазин"
-                        style="height: 150px; object-fit: cover"
-                      />
+                      <picture>
+                        <source
+                          srcset="images/project3.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="images/project3.jpg"
+                          class="card-img-top"
+                          alt="Приложение для рисования на доске"
+                          style="height: 150px; object-fit: cover"
+                        />
+                      </picture>
                       <div class="card-body">
                         <div class="card-title h5">
                           Приложение для рисования на доске

@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 :root {
   color-scheme: light dark;
 }
@@ -24,6 +31,7 @@ main {
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -66,6 +74,24 @@ body.dark-mode .navbar {
 body.dark-mode .navbar,
 body.dark-mode footer {
   background-color: #191717 !important;
+}
+
+.hero-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+@media (min-width: 400px) {
+  .hero-img {
+    width: 200px;
+  }
+}
+
+@media (min-width: 700px) {
+  .hero-img {
+    width: 300px;
+  }
 }
 
 .hero-img {
@@ -170,6 +196,11 @@ body.dark-mode .timeline-content {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 1.25rem;
 }
 
 .was-validated .form-control:invalid,
@@ -287,7 +318,7 @@ textarea {
 .projects-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-lg, 1.5rem);
+  gap: 1.5rem;
 }
 
 @supports (container-type: inline-size) {
@@ -295,16 +326,17 @@ textarea {
     container-type: inline-size;
     container-name: projects;
   }
-}
 
-@container projects (min-width: 640px) {
-  .projects-list {
-    grid-template-columns: repeat(2, 1fr);
+  @container projects (min-width: 640px) {
+    .projects-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
-}
-@container projects (min-width: 960px) {
-  .projects-list {
-    grid-template-columns: repeat(3, 1fr);
+
+  @container projects (min-width: 960px) {
+    .projects-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 
@@ -322,4 +354,40 @@ textarea {
     animation: none !important;
     transition: none !important;
   }
+}
+
+:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+a,
+button,
+input,
+textarea {
+  outline-offset: 2px;
+}
+@media (pointer: coarse) {
+  a,
+  button,
+  .nav__link {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid #0d6efd !important;
+  outline-offset: 2px !important;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
 }

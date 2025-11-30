@@ -4,8 +4,7 @@ $(document).ready(function () {
     $(this).addClass('active');
 
     const filter = $(this).text().trim().toLowerCase();
-
-    const cards = $('.col-md-6.col-lg-4');
+    const cards = $('.projects-list .project-card');
 
     cards.fadeOut(200);
 
@@ -13,12 +12,12 @@ $(document).ready(function () {
       if (filter === 'все') {
         cards.fadeIn(200);
       } else {
-        cards
-          .filter(function () {
-            const tags = $(this).find('.project-card').data('tags') || '';
-            return tags.toLowerCase().includes(filter);
-          })
-          .fadeIn(200);
+        cards.each(function () {
+          const tags = $(this).data('tags') || '';
+          if (tags.toLowerCase().includes(filter)) {
+            $(this).fadeIn(200);
+          }
+        });
       }
     }, 200);
   });
